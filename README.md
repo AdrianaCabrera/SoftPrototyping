@@ -1,37 +1,40 @@
 ## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/AdrianaCabrera/SoftPrototyping/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+'Soft Prototyping' is a term that refers the making, hacking, and fabrication of projects that demand flexibility, enabling an innovative way of communication and interaction.
+Digital fabrication has been increasing the boundaries of how and why we are manufacturing, working on a small scale, but in a high level of complexity. This development includes not only the use of the machines but also an in-depth study of the materials as paper, textiles, bio-materials, electronics, and their applications, that can be explored from a communication design perspective.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Practicing with materials allows a participatory process of learning and making by experimenting, creating feedback week by week in small assignments. With a final project development, the project will be documented from the very beginning in an online format. The final project must have a printed version.
+Topics to cover:
 
-### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Scheduale
 
-```markdown
-Syntax highlighted code block
+12th October
+GitLab Design HTML  (website) and Inflatables
+19th October
+Paper electronics 
+26th October
+Circular Patterns/pattern making
+2nd Nov
+3D printing & Bio-DIY material
+9th Nov
+Soft Sensors and embroidering
+16th Nov
+Knitting 
+23th  Nov
+wearables (I/O communication )
+30 Nov
+soft robotics casting and control 
+7 Dic
+Computational Design 
+14 Dic
+Networking Interaction 
+Hacking Machines from hard to soft communication 
+20  Dic
+Final Project
+7 January
+Middle Presentation 
+21 January 
+Final Presentation
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/AdrianaCabrera/SoftPrototyping/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
