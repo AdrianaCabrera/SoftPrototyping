@@ -1,0 +1,108 @@
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #f2f2f2;
+}
+
+li .nav {
+    float: left;
+}
+
+li .nav, a, .dropbtn {
+    display: inline-block;
+    color: grey;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li .nav, a.static {
+
+    color: #999999;
+    text-align: center;
+    padding: 9px 16px;
+    text-decoration:none;
+    font-size: 24px;
+}
+li .nav, a:hover, .dropdown:hover .dropbtn {
+    background-color: white;
+    color: black;
+}
+
+li.nav, .dropdown {
+    display: inline-block;
+    float: left;
+    
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: grey;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+li a, .number {
+    float: none;
+    display: inline-block;
+    text-align: center;
+    
+    
+}
+
+h1{ text-align: center;
+    letter-spacing: 3px;
+    color: grey;
+    padding: 12px 16px;
+}
+
+h2{ text-align: left;
+    color: grey;
+    line-height: 120%;
+    letter-spacing: 1px;
+    font-weight: normal;
+    padding: 12px 16px;
+}
+h4{ text-align: left;
+    color: grey;
+    line-height: 120%;
+    letter-spacing: 1px;
+    font-weight: normal;
+    padding: 12px 16px;
+}
+
+h5{ text-align: center;
+    color: grey;
+    line-height: 120%;
+    letter-spacing: 1px;
+    font-weight: normal;
+    padding: 12px 16px;
+}
+
+p { text-align: justify;
+    font-weight: normal;
+    font-style: normal; 
+    padding: 12px 16px;
+     
+    
+}
