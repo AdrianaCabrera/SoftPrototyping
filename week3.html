@@ -1,0 +1,138 @@
+<html>
+    <head>
+        <title>Week3</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+    
+            
+            <ul>
+                
+                <li class="nav"><a class="static" href="index.html" style="letter-spacing: 1px">Soft Prototyping</a></li>
+                <li class="nav"><a href="schedule.html">Schedule</a></li>
+                <li class="nav"><a href="participants.html">Participants</a></li>  
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Assignments</a>
+                        <div class="dropdown-content">
+                            <a href="week1.html">week1</a>
+                            <a href="week2.html">week2</a>
+                            <a href="week3.html">week3</a>
+                            <a href="week4.html">week4</a>
+                        </div>
+                </li>            
+            </ul>
+       
+            <div>
+            <h1>Fundamentals of Soft Prototyping</h1>
+            <h5> Communication Design Project Winter Semester 2018/2019 <br>Rhine-Waal University of Applied Sciences FabLab Kamp-Lintfort<br> by Adriana Cabrera </h5>
+                
+            </div>
+            
+            <div>
+            <h2> Paper Electronics</h2> 
+            
+            <p>In the following links you can find the second part of the Paper Electronics Session </p>
+            <iframe class= "centered" src="https://docs.google.com/presentation/d/e/2PACX-1vRD-xx8udyDvkfXmuhe-WvRmg7VJrEMaXpeaLkkSdKxfPSJjMHH4v6MnKCkbLwwrewFbCTK5tGoVNTz/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+            
+            <h2>“Jingle Bell” melody</h2>
+            <pre class="prettyprint linenums">
+            
+            /*
+  Melody
+
+  Plays the “Jingle Bell” melody and blink and LED to the melody
+
+*/
+
+#include "pitches.h"
+
+#define LOUDSPEAKER 0
+#define LED 1
+
+// notes for "Jingle Bell" melody
+int melody[] = {
+  NOTE_E5, NOTE_E5, NOTE_E5,
+  NOTE_E5, NOTE_E5, NOTE_E5,
+  NOTE_E5, NOTE_G5, NOTE_C5, NOTE_D5,
+  NOTE_E5,
+  NOTE_F5, NOTE_F5, NOTE_F5, NOTE_F5,
+  NOTE_F5, NOTE_E5, NOTE_E5, NOTE_E5, NOTE_E5,
+  NOTE_E5, NOTE_D5, NOTE_D5, NOTE_E5,
+  NOTE_D5, NOTE_G5
+};
+int tempo[] = {
+  8, 8, 4,
+  8, 8, 4,
+  8, 8, 8, 8,
+  2,
+  8, 8, 8, 8,
+  8, 8, 8, 16, 16,
+  8, 8, 8, 8,
+  4, 4
+};
+
+void setup() {
+  pinMode(LOUDSPEAKER, OUTPUT);
+  pinMode(LED, OUTPUT);
+  playTone();
+
+}
+
+void loop() {
+  // no need to repeat the melody.
+}
+
+void playTone(){
+  int size = sizeof(melody) / sizeof(int);
+  for (int thisNote = 0; thisNote < size; thisNote++) {
+
+    // to calculate the note duration, take one second
+    // divided by the note type.
+    //e.g. quarter note = 1000 / 4, eighth note = 1000/8, etc.
+    int noteDuration = 1000 / tempo[thisNote];
+    playNote(LOUDSPEAKER, melody[thisNote], noteDuration);
+    playNote(LED, melody[thisNote], noteDuration);
+
+    // to distinguish the notes, set a minimum time between them.
+    // the note's duration + 30% seems to work well:
+    int pauseBetweenNotes = noteDuration * 1.30;
+    delay(pauseBetweenNotes);
+
+    // stop the tone playing:
+    playNote(LOUDSPEAKER, 0, noteDuration);
+    playNote(LED, 0, noteDuration);
+
+  }
+}
+
+
+void playNote(int targetPin, long frequency, long length){
+    long delayValue = 1000000 / frequency / 2; // calculate the delay value between transitions
+    //// 1 second's worth of microseconds, divided by the frequency, then split in half since
+    //// there are two phases to each cycle
+    long numCycles = frequency * length / 1000; // calculate the number of cycles for proper timing
+    //// multiply frequency, which is really cycles per second, by the number of seconds to
+    //// get the total number of cycles to produce
+    for (long i = 0; i < numCycles; i++) { // for the calculated length of time...
+      digitalWrite(targetPin, HIGH); // write the buzzer pin high to push out the diaphram
+      delayMicroseconds(delayValue); // wait for the calculated delay value
+      digitalWrite(targetPin, LOW); // write the buzzer pin low to pull back the diaphram
+      delayMicroseconds(delayValue); // wait again or the calculated delay value
+    }
+
+}
+
+            
+            
+            </pre>
+                
+                
+                
+        <div>
+            <a style="text-align: center; letter-spacing: 2pt" href="http://fablab.hochschule-rhein-waal.de/">FabLab Kamp-Lintfort</a>
+        </div>    
+        
+        </div>
+    </body>
+    
+</html>
