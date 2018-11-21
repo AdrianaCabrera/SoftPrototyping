@@ -9,7 +9,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #f2f2f2;
+    background-color: white;
 }
 
 li .nav {
@@ -18,7 +18,7 @@ li .nav {
 
 li .nav, a, .dropbtn {
     display: inline-block;
-    color: grey;
+    color: #999999;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -76,20 +76,20 @@ li a, .number {
 }
 
 h1{ text-align: center;
-    letter-spacing: 3px;
-    color: grey;
+    letter-spacing: 1px;
+    color: #999999;
     padding: 12px 16px;
 }
 
 h2{ text-align: left;
-    color: grey;
+    color: #999999;
     line-height: 120%;
     letter-spacing: 1px;
     font-weight: normal;
     padding: 12px 16px;
 }
 h4{ text-align: left;
-    color: grey;
+    color: #999999;
     line-height: 120%;
     letter-spacing: 1px;
     font-weight: normal;
@@ -97,7 +97,7 @@ h4{ text-align: left;
 }
 
 h5{ text-align: center;
-    color: grey;
+    color: #999999;
     line-height: 120%;
     letter-spacing: 1px;
     font-weight: normal;
@@ -152,9 +152,12 @@ p { text-align: justify;
     }
 }
 
-#body-margin {
-    margin-left: 2%;
-    margin-right: 2%;
+.body-margin {
+    margin-left: 12%;
+    margin-right: 12%;
+    font-family: ;
+    letter-spacing: 0.5pt ;
+    
     }
 .centered {
     margin: auto;
